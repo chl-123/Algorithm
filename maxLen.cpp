@@ -2,13 +2,13 @@
 //
 
 
-#include <iostream> 
-#include <cstring> 
-#include <algorithm> 
-using namespace std;
-
-const int  MAXN = 1010;
-int a[MAXN];   int maxLen[MAXN];
+//#include <iostream> 
+//#include <cstring> 
+//#include <algorithm> 
+////using namespace std;
+//
+//const int  MAXN = 1010;
+//int a[MAXN];   int maxLen[MAXN];
 
 //int main() 
 //{

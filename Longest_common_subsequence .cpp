@@ -4,7 +4,7 @@
 #include <iostream> 
 #include <cstring> 
 #include<algorithm>
-using namespace std;
+//using namespace std;
 
 //char sz1[1000];
 //char sz2[1000];
@@ -32,10 +32,10 @@ using namespace std;
 //	return 0;
 //}
 
-
-char s1[100];
-char s2[100];
-int maxlenth[100][100];
+//
+//char s1[100];
+//char s2[100];
+//int maxlenth[100][100];
 //int main() 
 //{
 //    while (cin>>s1>>s2)

@@ -1,7 +1,7 @@
 #include<iostream>
-using namespace std;
-int dis[4] = { 1,-1,4,-4 }, visit[13];
-int i1, i2, i3, i4, i5, cnt, result = 0;
+//using namespace std;
+//int dis[4] = { 1,-1,4,-4 }, visit[13];
+//int i1, i2, i3, i4, i5, cnt, result = 0;
 //void dfs(int index)
 //{
 //	if (cnt >= 5)return;

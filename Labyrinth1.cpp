@@ -6,56 +6,56 @@
 #include<queue>
 #include<fstream>
 #include<typeinfo>
-using namespace std;
+//using namespace std;
 //vector<vector<char>> a(51);
-int T_min = 10000;
-char book[51][51], a[51][51];
-char  target[4] = { 'U','L','R','D' };
-void dfs(int x, int y, int step)
-{
-    int move[4][2] = { 0,1,1,0,0,-1,-1,0 };
-    int tx, ty, k;
-    if (x == 10 && y == 10)
-    {
-
-        if (step < T_min)
-        {
-            T_min = step;
-            for (int i = 0; i < 12; i++)
-            {
-                for (int j = 0; j < 12; j++)//定义列循环
-                {
-                    cout << book[i][j] << "";//读取一个值（空格、制表符、换行隔开）就写入到矩阵中，行列不断循环进行
-                }
-                cout << endl;
-            }
-        }
-        return;
-    }
-    for (k = 0; k < 4; k++)
-    {
-
-        tx = x + move[k][0];
-        ty = y + move[k][1];
-        if (tx < 0 || tx>11 || ty < 0 || ty>11)
-        {
-            continue;
-        }
-        //cout << 2;
-        if (a[tx][ty] == 'S' && book[tx][ty] == NULL)
-        {
-            //cout << 1;
-            //char temp = book[tx][ty];
-            book[tx][ty] = target[k];
-            dfs(tx, ty, step + 1);
-            book[tx][ty] = NULL;
-        }
-
-    }
-
-
-    return;
-}
+//int T_min = 10000;
+//char book[51][51], a[51][51];
+//char  target[4] = { 'U','L','R','D' };
+//void dfs(int x, int y, int step)
+//{
+//    int move[4][2] = { 0,1,1,0,0,-1,-1,0 };
+//    int tx, ty, k;
+//    if (x == 10 && y == 10)
+//    {
+//
+//        if (step < T_min)
+//        {
+//            T_min = step;
+//            for (int i = 0; i < 12; i++)
+//            {
+//                for (int j = 0; j < 12; j++)//定义列循环
+//                {
+//                    cout << book[i][j] << "";//读取一个值（空格、制表符、换行隔开）就写入到矩阵中，行列不断循环进行
+//                }
+//                cout << endl;
+//            }
+//        }
+//        return;
+//    }
+//    for (k = 0; k < 4; k++)
+//    {
+//
+//        tx = x + move[k][0];
+//        ty = y + move[k][1];
+//        if (tx < 0 || tx>11 || ty < 0 || ty>11)
+//        {
+//            continue;
+//        }
+//        //cout << 2;
+//        if (a[tx][ty] == 'S' && book[tx][ty] == NULL)
+//        {
+//            //cout << 1;
+//            //char temp = book[tx][ty];
+//            book[tx][ty] = target[k];
+//            dfs(tx, ty, step + 1);
+//            book[tx][ty] = NULL;
+//        }
+//
+//    }
+//
+//
+//    return;
+//}
 //int main()
 //{
 //

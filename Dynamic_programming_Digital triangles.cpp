@@ -1,14 +1,14 @@
 // 动态规划-数字三角形.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include <iostream>
-#include<algorithm>
-
-using namespace std;
-#define maxindex 101
-int maxsum[maxindex][maxindex];
-int D[maxindex][maxindex];
-int n, m;
+//#include <iostream>
+//#include<algorithm>
+//
+////using namespace std;
+//#define maxindex 101
+//int maxsum[maxindex][maxindex];
+//int D[maxindex][maxindex];
+//int n, m;
 
 
 

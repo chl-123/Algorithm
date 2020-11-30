@@ -3,12 +3,8 @@
 
 #include<vector>
 #include<iostream>
-
+#include"Graph_coloring.h"
 using namespace std;
-
-
-
-
 
 vector<vector<int>> dfs(vector<vector<int>>& image, int sr, int sc, int newColor)
 {
@@ -29,35 +25,32 @@ vector<vector<int>> dfs(vector<vector<int>>& image, int sr, int sc, int newColor
     if (sc + 1 < image[0].size() && image[sr][sc + 1] == target) dfs(image, sr, sc + 1, newColor);
     return image;
 }
-//int main()
-//{
-//    vector<vector<int>> image(50);
-//    int n, m, s;
-//    cin >> n >> m;
-//    for (int i = 0; i < n; i++)
-//    {
-//        for (int j = 0; j < m; j++)
-//        {
-//            cin >> s;
-//            image[i].push_back(s);
-//        }
-//    }
-//    int sr, sc, newcolor;
-//    cin >> sr >> sc >> newcolor;
-//    dfs(image, sr, sc, newcolor);
-//    for (int i = 0; i < n; i++)
-//    {
-//        for (int j = 0; j < m; j++)
-//        {
-//            cout << image[i][j];
-//        }
-//        cout << endl;
-//    }
-//    return 0;
-//
-//
-//
-//}
+void Graph_coloring()
+{
+    vector<vector<int>> image(50);
+        int n, m, s;
+        cin >> n >> m;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                cin >> s;
+                image[i].push_back(s);
+            }
+        }
+        int sr, sc, newcolor;
+        cin >> sr >> sc >> newcolor;
+        dfs(image, sr, sc, newcolor);
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                cout << image[i][j];
+            }
+            cout << endl;
+        }
+}
+
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单

@@ -4,16 +4,16 @@
 #include<queue>
 #include<fstream>
 #include<typeinfo>
-using namespace std;
+//using namespace std;
 
-struct node
-{
-	int x;
-	int y;
-	int f;
-	int s;
-	char dir;
-};
+//struct node
+//{
+//	int x;
+//	int y;
+//	int f;
+//	int s;
+//	char dir;
+//};
 
 //int main(void)
 //{

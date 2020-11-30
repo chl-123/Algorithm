@@ -1,36 +1,36 @@
 
 #include<cstdio>
 #include<set>
-using namespace std;
-int Father[200];
-int findFather(int x)
-{
-	while (Father[x] != x)
-	{
-		x = Father[x];
-	}
-
-
-	return x;
-
-}
-set<int> total;
-void unionFather(int a, int b)
-{
-
-	total.insert(a);
-	total.insert(b);
-	int fa = findFather(a), fb = findFather(b);
-	if (fa > fb)
-	{
-		Father[fa] = fb;
-	}
-	else
-	{
-		Father[fb] = fa;
-	}
-
-}
+//using namespace std;
+//int Father[200];
+//int findFather(int x)
+//{
+//	while (Father[x] != x)
+//	{
+//		x = Father[x];
+//	}
+//
+//
+//	return x;
+//
+//}
+//set<int> total;
+//void unionFather(int a, int b)
+//{
+//
+//	total.insert(a);
+//	total.insert(b);
+//	int fa = findFather(a), fb = findFather(b);
+//	if (fa > fb)
+//	{
+//		Father[fa] = fb;
+//	}
+//	else
+//	{
+//		Father[fb] = fa;
+//	}
+//
+//}
 //int main()
 //{
 //

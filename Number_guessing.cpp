@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cmath>
-using namespace std;
+//using namespace std;
 //int main()
 //{
 //	int n, t, sum = 0, mindet = 100, minid;

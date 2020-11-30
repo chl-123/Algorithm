@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+#include"SortAlgorithm.h"
+#include"Graph_coloring.h"
+#include"Graph_coloring_judge.h"
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+   // Sort sort;
+
+    //sort.sort_do();
+    //Graph_coloring();
+    //sort.bubbleSort();
+    Graph_coloring();
+    
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
