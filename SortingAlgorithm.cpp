@@ -68,6 +68,11 @@ void Sort::sort_do() {
 		cout << a[i];
 }
 
+void Sort::heapSort()
+{
+	
+}
+
 
 	
 	

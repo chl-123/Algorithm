@@ -9,6 +9,7 @@ public:
 	void quickSort(int left, int right);
 	void bubbleSort();
 	void sort_do();
+	void heapSort();
 private:
 	int a[101],n;
 	int i, j, t, temp;
