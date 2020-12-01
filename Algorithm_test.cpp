@@ -5,6 +5,7 @@
 #include"SortAlgorithm.h"
 #include"Graph_coloring.h"
 #include"Graph_coloring_judge.h"
+#include"maxLen.h"
 using namespace std;
 
 int main()

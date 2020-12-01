@@ -71,21 +71,3 @@ void Sort::sort_do() {
 
 	
 	
-	//int main()
-	//{
-	//	int i, j, t;
-	//	//读入数据
-	//	//scanf_s("%d", &n);
-	//	cin >> n;
-	//	for (i = 1; i <= n; i++)
-	//		//scanf_s("%d", &a[i]);
-	//		cin >> a[i];
-	//	quicksort(1, n); //快速排序调用
-	//	//输出排序后的结果
-	//	for (i = 1; i <= n; i++)
-	//		//printf_s("%d ", a[i]);
-	//		cout << a[i];
-	//	//getchar(); getchar();
-	//	cout << 1;
-	//}
-	//最终将基准数归位

@@ -98,5 +98,8 @@
     <ClInclude Include="Graph_coloring_judge.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="maxLen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

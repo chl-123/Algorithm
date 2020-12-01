@@ -167,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="Graph_coloring.h" />
     <ClInclude Include="Graph_coloring_judge.h" />
+    <ClInclude Include="maxLen.h" />
     <ClInclude Include="SortAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
