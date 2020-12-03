@@ -2,13 +2,13 @@
 //
 #include<iostream>
 using namespace std;
-int n;//集装箱数  
-int w[40];//集装箱重量
+extern int n;//集装箱数  
+extern int w[40];//集装箱重量
 int c1, c2;//两艘船的载重量  
 int ans;//当前载重量  
 int bestans;//当前最优载重量  
 int r;//剩余集装箱重量 
-void backtrack(int i)
+ void backtrack2(int i)
 {
     if (i > n)
     {
@@ -19,11 +19,11 @@ void backtrack(int i)
     if (ans + w[i] <= c1)
     {
         ans += w[i];
-        backtrack(i + 1);
+        backtrack2(i + 1);
         //改回辅助的全局变量 
         ans -= w[i];
     }
-    if (ans + r > bestans) backtrack(i + 1);
+    if (ans + r > bestans) backtrack2(i + 1);
     //改回辅助的全局变量 
     r += w[i];
 }
@@ -31,7 +31,7 @@ int maxloading()
 {
     ans = 0;
     bestans = 0;
-    backtrack(1);
+    backtrack2(1);
     return bestans;
 }
 

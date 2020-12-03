@@ -10,7 +10,7 @@ int isPrime[M];////素数表,下标为素数的置为1,否则0
 int vis[M >> 1];// vis 标识 1-n,是否被选  
 int res[M >> 1];// 存储解向量  
 
-int cnt;// 测试样例个数  
+extern int cnt;// 测试样例个数  
 
 void prime()//求出1-40的所有素数  
 {
@@ -38,8 +38,8 @@ void dfs(int cur, int n)
     if (cur == n && isPrime[res[n - 1] + res[0]])//别忘了测试边界，最后一个和第一个数 构成的环  
     {
         for (i = 0; i < n - 1; ++i)
-            printf("%d ", res[i]);
-        printf("%d\n", res[i]);
+            printf_s("%d ", res[i]);
+        printf_s("%d\n", res[i]);
     }
     else
     {
@@ -62,15 +62,15 @@ void Prime_ring()
     int n;
     //freopen("in.txt", "r", stdin);  
     prime();
-    cnt = 0;
-    while (scanf("%d", &n) != EOF)
+     cnt = 0;
+    while (scanf_s("%d", &n) != EOF)
     {
         ++cnt;
-        printf("Case %d:\n", cnt);
+        printf_s("Case %d:\n", cnt);
         memset(vis, 0, sizeof(vis));
         res[0] = 1;
         dfs(1, n);
-        printf("\n");
+        printf_s("\n");
     }
 
 }

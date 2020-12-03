@@ -39,17 +39,17 @@ void Tribal_problem()
 		Father[i] = i;
 	}
 	int n, k, t, s, q;
-	scanf("%d", &n);
+	scanf_s("%d", &n);
 	for (int i = 0; i < n; i++)
 	{
-		scanf("%d %d", &k, &t);
+		scanf_s("%d %d", &k, &t);
 		if (k == 1)
 		{
 			unionFather(t, t);
 		}
 		for (int j = 1; j < k; j++)
 		{
-			scanf("%d", &s);
+			scanf_s("%d", &s);
 			unionFather(t, s);
 		}
 	}
@@ -59,12 +59,12 @@ void Tribal_problem()
 	{
 		cnt.insert(findFather(*it));
 	}
-	printf("%lu %lu\n", total.size(), cnt.size());
-	scanf("%d", &q);
+	printf_s("%lu %lu\n", total.size(), cnt.size());
+	scanf_s("%d", &q);
 	for (int i = 0; i < q; i++)
 
 	{
-		scanf("%d %d", &t, &s);
-		printf("%c\n", findFather(t) == findFather(s) ? 'Y' : 'N');
+		scanf_s("%d %d", &t, &s);
+		printf_s("%c\n", findFather(t) == findFather(s) ? 'Y' : 'N');
 	}
 }

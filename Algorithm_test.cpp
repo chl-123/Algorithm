@@ -10,12 +10,12 @@ using namespace std;
 
 int main()
 {
-   // Sort sort;
-
+    Sort sort;
+    sort.insertSort();
     //sort.sort_do();
     //Graph_coloring();
     //sort.bubbleSort();
-    Graph_coloring();
+    //Graph_coloring();
     
 }
 

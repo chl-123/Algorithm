@@ -8,19 +8,19 @@
 #include<typeinfo>
 using namespace std;
 
-int T_min = 10000;
+ int T_min1 = 10000;
 int book[51][51], a[51][51], target[51][51];
 
-void dfs(int x, int y, int step)
+ void dfs1(int x, int y, int step)
 {
     int move[4][2] = { 0,1,1,0,0,-1,-1,0 };
     int tx, ty, k;
     if (x == 7 && y == 7)
     {
 
-        if (step < T_min)
+        if (step < T_min1)
         {
-            T_min = step;
+            T_min1 = step;
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)//定义列循环
@@ -45,7 +45,7 @@ void dfs(int x, int y, int step)
         {
             //char temp = book[tx][ty];
             book[tx][ty] = 1;
-            dfs(tx, ty, step + 1);
+            dfs1(tx, ty, step + 1);
             book[tx][ty] = 0;
         }
 
@@ -82,7 +82,7 @@ void Labyrinth2()
     }
     // cin >> n >> m >> p >> q;
     book[1][1] = 1;
-    dfs(1, 1, 0);
+    dfs1(1, 1, 0);
     for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)//定义列循环
@@ -91,7 +91,7 @@ void Labyrinth2()
         }
         cout << endl;
     }
-    cout << T_min;
+    cout << T_min1;
 
 }
 

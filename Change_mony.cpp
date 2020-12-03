@@ -10,7 +10,7 @@ int cmpl(int a, int b)
 {
 	return a > b;
 }
-int ChangeMony(void)
+void ChangeMony(void)
 {
 	int n, m;
 	cin >> n >> m;

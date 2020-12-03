@@ -3,7 +3,8 @@
 #include<set>
 #include "Graph_coloring_judge.h"
 using namespace std;
-int n, m, k, num;
+extern int n,m;
+int  k, num;
 vector<vector<int>> v(520);
 vector<int> color(510);
 bool f(int i)

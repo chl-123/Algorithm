@@ -13,7 +13,7 @@ int bestvalue = MAX;//最优的时间
 int xvalue = 0;//当前完成用的时间
 int f1 = 0;//机器1完成的时间
 int* f2;//机器2完成的时间
-void backtrack(int k)
+extern void backtrack(int k)
 {
     if (k > number)
     {

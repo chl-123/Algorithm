@@ -7,11 +7,11 @@
 #include<fstream>
 #include<typeinfo>
 using namespace std;
-vector<vector<char>> a(51);
+//vector<vector<char>> a(51);
 int T_min = 10000;
 char book[51][51], a[51][51];
 char  target[4] = { 'U','L','R','D' };
-void dfs(int x, int y, int step)
+extern void dfs(int x, int y, int step)
 {
     int move[4][2] = { 0,1,1,0,0,-1,-1,0 };
     int tx, ty, k;

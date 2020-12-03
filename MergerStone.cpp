@@ -11,7 +11,7 @@ const int INF = 1 << 30;
 
 int dp[N][N];
 int sum[N];
-int a[N];
+extern int a[N];
 
 int getMinval(int* a, int n)
 {

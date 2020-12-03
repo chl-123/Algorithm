@@ -18,7 +18,7 @@ bool ok(int k)
 	}
 	return true;
 }
-void backtrack(int t)
+ void backtrack1(int t)
 {
 
 	if (t > v)sum++;
@@ -29,7 +29,7 @@ void backtrack(int t)
 			color[t] = i;
 			if (ok(t))
 			{
-				backtrack(t + 1);
+				backtrack1(t + 1);
 			}
 			color[t] = 0;
 		}
@@ -58,7 +58,7 @@ void Graph_coloring2()
 	{
 		color[i] = 0;
 	}
-	backtrack(1);
+	backtrack1(1);
 	cout << sum << endl;
 }
 

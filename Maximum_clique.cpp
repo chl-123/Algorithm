@@ -11,7 +11,7 @@ bool x[N];
 bool bestx[N];
 int bestn;
 int cn;
-int n, m;
+extern int n, m;
 
 bool place(int t)
 {
@@ -29,7 +29,7 @@ bool place(int t)
 	return ok;
 }
 
-void backtrack(int t)
+void backtrack3(int t)
 {
 	if (t > n)
 	{
@@ -44,13 +44,13 @@ void backtrack(int t)
 	{
 		x[t] = 1;
 		cn++;
-		backtrack(t + 1);
+		backtrack3(t + 1);
 		cn--;
 	}
 	if (cn + n - t > bestn)
 	{
 		x[t] = 0;
-		backtrack(t + 1);
+		backtrack3(t + 1);
 	}
 }
 
@@ -69,7 +69,7 @@ void Maximum_clique_do()
 	}
 	bestn = 0;
 	cn = 0;
-	backtrack(1);
+	backtrack3(1);
 	cout << bestn << endl;
 	for (int i = 1; i <=n ; i++)
 	{
