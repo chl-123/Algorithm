@@ -50,7 +50,8 @@ void Sort::bubbleSort()
 		{
 			if (a[j] > a[j + 1])
 			{
-				t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+				swap(a[j], a[j + 1]);
+				
 			}
 		}
 	}
@@ -102,35 +103,17 @@ void Sort::Merge(int arr[], int l, int mid, int r)
 {
 
 	int* aux = new int[r - l + 1];      //创建数组指针
-	for (int i = l; i <= r; i++) //拷贝数组
+	int i, j, k;
+	for (i = mid + l; i > l; i--)
+		aux[i - l] = arr[i - l];
+	for ( j = mid; j <r; j++)
+		aux[r+mid-j] = arr[j+l];
+	for ( k=l; k <=r; k++)
 	{
-		aux[i - l] = arr[i];
-	}
-
-	int i = l, j = mid + 1;         //将数组分成两部分进行比较
-	for (int k = l; k <= r; k++)
-	{
-		//判断位置合法性，左端已遍历结束
-		if (i > mid)
-		{
-			arr[k] = aux[j - l];
-			j++;
-		}//判断位置合法性，右端遍历已结束
-		else if (j > r)
-		{
-			arr[k] = aux[i - l];
-			i++;
-		}//合法情况，进行比较
-		else if (aux[i - l] < aux[j - l])
-		{
-			arr[k] = aux[i - l];
-			i++;
-		}
+		if (aux[i] < aux[j])
+			arr[k] = aux[i++];
 		else
-		{
-			arr[k] = aux[j - l];
-			j++;
-		}
+			arr[k] = aux[j--];
 	}
 }
 
