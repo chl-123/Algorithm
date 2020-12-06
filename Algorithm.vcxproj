@@ -159,6 +159,7 @@
     <ClCompile Include="MergerStone.cpp" />
     <ClCompile Include="Number_guessing.cpp" />
     <ClCompile Include="Prime_ring.cpp" />
+    <ClCompile Include="Shortest_path.cpp" />
     <ClCompile Include="SortingAlgorithm.cpp" />
     <ClCompile Include="Strassen_algorithm.cpp" />
     <ClCompile Include="Tribal_problem.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Graph_coloring.h" />
     <ClInclude Include="Graph_coloring_judge.h" />
     <ClInclude Include="maxLen.h" />
+    <ClInclude Include="Shortest_path.h" />
     <ClInclude Include="SortAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

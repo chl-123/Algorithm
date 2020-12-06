@@ -87,6 +87,9 @@
     <ClCompile Include="SortingAlgorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Shortest_path.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortAlgorithm.h">
@@ -99,6 +102,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="maxLen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortest_path.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

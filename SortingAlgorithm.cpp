@@ -18,9 +18,9 @@ void Sort::quickSort(int left, int right)
 	
 	if (left > right)
 		return;
-	temp = a[left]; //temp中存的就是基准数
-	i = left;
-	j = right;
+	int temp = a[left]; //temp中存的就是基准数
+	int i = left;
+	int j = right;
 	while (i != j)
 	{
 		//顺序很重要，要先从右往左找
@@ -44,9 +44,9 @@ void Sort::quickSort(int left, int right)
 void Sort::bubbleSort()
 {
 	//开始冒泡排序
-	for (i = 1; i <= n - 1; i++)
+	for (int i = 1; i <= n - 1; i++)
 	{
-		for (j = 1; j <= n - i; j++)
+		for (int j = 1; j <= n - i; j++)
 		{
 			if (a[j] > a[j + 1])
 			{
@@ -71,7 +71,66 @@ void Sort::sort_do() {
 
 void Sort::heapSort()
 {
+	while (n>1)
+	{
+		swap(h[1], h[n]);
+		n--;
+		siftdown(1);
+	}
 	
+}
+
+void Sort::siftdown(int i)
+{
+	int t, flag = 0;
+	while (i * 2 <= n && flag == 0)
+	{
+		if (h[i] < h[i * 2])
+			t = i * 2;
+		else
+			t = i;
+		if (i*2+1<=n)
+		{
+			if (h[t] < h[i * 2 + 1])
+				t = i * 2 + 1;
+		}
+		if (t != i)
+		{
+			swap(t, i);
+			i = t;
+		}else
+			flag = 1;
+
+	}
+
+	
+}
+
+void Sort::heapSort_do()
+{
+	int i, j, t, num;
+	//读入数据
+	cin >> num;
+	for (i = 1; i <= num; i++)
+		cin >> h[i];
+	//quickSort(1, n); //快速排序调用
+	n = num;
+	//bubbleSort();
+	creat();
+	heapSort();
+	//输出排序后的结果
+	for (i = 1; i <= num; i++)
+		cout << h[i];
+}
+
+void Sort::creat()
+{
+	int i;
+	for ( i =n/2; i>=1 ; i--)
+	{
+		siftdown(i);
+	}
+
 }
 
 void Sort::insertSort()

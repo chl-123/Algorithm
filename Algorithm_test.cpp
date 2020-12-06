@@ -11,7 +11,8 @@ using namespace std;
 int main()
 {
     Sort sort;
-    sort.insertSort();
+    sort.heapSort_do();
+    
     //sort.sort_do();
     //Graph_coloring();
     //sort.bubbleSort();
